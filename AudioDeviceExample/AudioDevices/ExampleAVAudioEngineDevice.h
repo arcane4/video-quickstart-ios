@@ -21,6 +21,8 @@ NS_CLASS_AVAILABLE(NA, 11_0)
  *  argument to `YES`.
  *  If the `continuous` is set to `NO`, the audio device will not continue playing the music once you disconnect from the Room.
  */
-- (void)playMusic:(BOOL)continuous;
-
+- (void)playMusic:(BOOL)continuous : (BOOL)musicMode;
+- (void)stopMusic;
+- (AVAudioEngine *)getAudioEngine;
+- (AVAudioEngine *)getRecordEngine;
 @end
